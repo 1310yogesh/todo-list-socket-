@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "640cdfea-1cd4-4c6e-a18d-1e75ff528775",
+		"name": "todo app with socket",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37609291"
+	},
+	"item": [
+		{
+			"name": "get task list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/todo/list?page=1&pageSize=10&search=&orderBy=createdAt&sortBy=DESC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"todo",
+						"list"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "search",
+							"value": ""
+						},
+						{
+							"key": "orderBy",
+							"value": "createdAt"
+						},
+						{
+							"key": "sortBy",
+							"value": "DESC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/1013y/OneDrive/Pictures/Screenshots/Screenshot 2023-03-03 112325.png"
+						},
+						{
+							"key": "id",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8000/api/todo/upload-image"
+			},
+			"response": []
+		},
+		{
+			"name": "image url",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/images/Screenshot 2023-03-03 112325.png"
+			},
+			"response": []
+		}
+	]
+}
